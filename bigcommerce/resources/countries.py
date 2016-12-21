@@ -2,7 +2,7 @@ from .base import *
 
 
 class Countries(ListableApiResource, CountableApiResource):
-    resource_name = 'countries'
+    resource_name = 'v2/countries'
 
     def states(self, id=None):
         if id:
@@ -13,5 +13,5 @@ class Countries(ListableApiResource, CountableApiResource):
 
 class CountryStates(ListableApiSubResource, CountableApiSubResource):
     resource_name = 'states'
-    parent_resource = 'countries'
+    parent_resource = 'v2/countries'
     parent_key = 'country_id'

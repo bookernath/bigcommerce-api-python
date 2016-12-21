@@ -177,7 +177,7 @@ class OAuthConnection(Connection):
     The verify_payload method is also provided for authenticating signed payloads passed to an application's load url.
     """
 
-    def __init__(self, client_id, store_hash, access_token=None, host='api.bigcommerce.com', api_path='/stores/{}/v2/{}'):
+    def __init__(self, client_id, store_hash, access_token=None, host='api.bigcommerce.com', api_path='/stores/{}/{}'):
         self.client_id = client_id
         self.store_hash = store_hash
         self.host = host

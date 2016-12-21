@@ -4,7 +4,7 @@ from .base import *
 class Customers(ListableApiResource, CreateableApiResource,
                 UpdateableApiResource, DeleteableApiResource,
                 CollectionDeleteableApiResource, CountableApiResource):
-    resource_name = 'customers'
+    resource_name = 'v2/customers'
 
     def addresses(self, id=None):
         if id:
@@ -17,5 +17,5 @@ class CustomerAddresses(ListableApiSubResource, CreateableApiSubResource,
                         UpdateableApiSubResource, DeleteableApiSubResource,
                         CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'addresses'
-    parent_resource = 'customers'
+    parent_resource = 'v2/customers'
     parent_key = 'customer_id'

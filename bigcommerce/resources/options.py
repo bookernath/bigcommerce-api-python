@@ -4,7 +4,7 @@ from .base import *
 class Options(ListableApiResource, CreateableApiResource,
               UpdateableApiResource, DeleteableApiResource,
               CollectionDeleteableApiResource, CountableApiResource):
-    resource_name = 'options'
+    resource_name = 'v2/options'
 
     def values(self, id=None):
         if id:
@@ -17,5 +17,5 @@ class OptionValues(ListableApiSubResource, CreateableApiSubResource,
                    UpdateableApiSubResource, DeleteableApiSubResource,
                    CollectionDeleteableApiSubResource):
     resource_name = 'values'
-    parent_resource = 'options'
+    parent_resource = 'v2/options'
     parent_key = 'option_id'

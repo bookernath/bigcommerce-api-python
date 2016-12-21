@@ -2,4 +2,4 @@ from .base import *
 
 
 class TaxClasses(ListableApiResource):
-    resource_name = 'tax_classes'
+    resource_name = 'v2/tax_classes'

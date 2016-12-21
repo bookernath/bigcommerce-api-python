@@ -4,4 +4,4 @@ from .base import *
 class CustomerGroups(ListableApiResource, CreateableApiResource,
                      UpdateableApiResource, DeleteableApiResource,
                      CollectionDeleteableApiResource, CountableApiResource):
-    resource_name = 'customer_groups'
+    resource_name = 'v2/customer_groups'

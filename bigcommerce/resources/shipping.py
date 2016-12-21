@@ -2,4 +2,4 @@ from .base import *
 
 
 class ShippingMethods(ListableApiResource):
-    resource_name = 'shipping/methods'
+    resource_name = 'v2/shipping/methods'

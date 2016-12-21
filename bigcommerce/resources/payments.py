@@ -2,4 +2,4 @@ from .base import *
 
 
 class PaymentMethods(ListableApiResource):
-    resource_name = 'payments/methods'
+    resource_name = 'v2/payments/methods'

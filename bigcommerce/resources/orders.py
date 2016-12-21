@@ -4,7 +4,7 @@ from .base import *
 class Orders(ListableApiResource, CreateableApiResource,
              UpdateableApiResource, DeleteableApiResource,
              CollectionDeleteableApiResource, CountableApiResource):
-    resource_name = 'orders'
+    resource_name = 'v2/orders'
 
     def coupons(self, id=None):
         if id:
@@ -45,13 +45,13 @@ class Orders(ListableApiResource, CreateableApiResource,
 
 class OrderCoupons(ListableApiSubResource):
     resource_name = 'coupons'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'
 
 
 class OrderProducts(ListableApiSubResource, CountableApiSubResource):
     resource_name = 'products'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'
     count_resource = 'orders/products'
 
@@ -60,25 +60,25 @@ class OrderShipments(ListableApiSubResource, CreateableApiSubResource,
                      UpdateableApiSubResource, DeleteableApiSubResource,
                      CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'shipments'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'
     count_resource = 'orders/shipments'
 
 
 class OrderShippingAddresses(ListableApiSubResource, CountableApiSubResource):
     resource_name = 'shipping_addresses'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'
     count_resource = 'orders/shipping_addresses'
 
 
 class OrderMessages(ListableApiSubResource):
     resource_name = 'messages'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'
 
 
 class OrderTaxes(ListableApiSubResource):
     resource_name = 'taxes'
-    parent_resource = 'orders'
+    parent_resource = 'v2/orders'
     parent_key = 'order_id'

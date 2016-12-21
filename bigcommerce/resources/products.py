@@ -4,7 +4,7 @@ from .base import *
 class Products(ListableApiResource, CreateableApiResource,
                UpdateableApiResource, DeleteableApiResource,
                CollectionDeleteableApiResource, CountableApiResource):
-    resource_name = 'products'
+    resource_name = 'v2/products'
 
     def configurable_fields(self, id=None):
         if id:
@@ -67,7 +67,7 @@ class Products(ListableApiResource, CreateableApiResource,
 class ProductConfigurableFields(ListableApiSubResource, DeleteableApiSubResource,
                                 CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'configurable_fields'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/configurable_fields'
 
@@ -76,7 +76,7 @@ class ProductCustomFields(ListableApiSubResource, CreateableApiSubResource,
                           UpdateableApiSubResource, DeleteableApiSubResource,
                           CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'custom_fields'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/custom_fields'
 
@@ -85,7 +85,7 @@ class ProductDiscountRules(ListableApiSubResource, CreateableApiSubResource,
                            UpdateableApiSubResource, DeleteableApiSubResource,
                            CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'discount_rules'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/discount_rules'
 
@@ -94,14 +94,14 @@ class ProductImages(ListableApiSubResource, CreateableApiSubResource,
                     UpdateableApiSubResource, DeleteableApiSubResource,
                     CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'images'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/images'
 
 
 class ProductOptions(ListableApiSubResource):
     resource_name = 'options'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
 
 
@@ -109,7 +109,7 @@ class ProductReviews(ListableApiSubResource, CreateableApiSubResource,
                    UpdateableApiSubResource, DeleteableApiSubResource,
                    CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'reviews'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/reviews'
 
@@ -118,7 +118,7 @@ class ProductRules(ListableApiSubResource, CreateableApiSubResource,
                    UpdateableApiSubResource, DeleteableApiSubResource,
                    CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'rules'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/rules'
 
@@ -127,19 +127,19 @@ class ProductSkus(ListableApiSubResource, CreateableApiSubResource,
                   UpdateableApiSubResource, DeleteableApiSubResource,
                   CollectionDeleteableApiSubResource, CountableApiSubResource):
     resource_name = 'skus'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/skus'
 
 
 class ProductVideos(ListableApiSubResource, CountableApiSubResource):
     resource_name = 'videos'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'
     count_resource = 'products/videos'
 
 
 class GoogleProductSearchMappings(ListableApiSubResource):
     resource_name = 'googleproductsearch'
-    parent_resource = 'products'
+    parent_resource = 'v2/products'
     parent_key = 'product_id'

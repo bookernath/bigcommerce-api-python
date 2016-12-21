@@ -2,4 +2,4 @@ from .base import *
 
 
 class Store(ListableApiResource):
-    resource_name = 'store'
+    resource_name = 'v2/store'

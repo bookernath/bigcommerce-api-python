@@ -2,4 +2,4 @@ from .base import *
 
 
 class Time(ListableApiResource):
-    resource_name = 'time'
+    resource_name = 'v2/time'

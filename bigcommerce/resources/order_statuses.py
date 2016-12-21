@@ -2,4 +2,4 @@ from .base import *
 
 
 class OrderStatuses(ListableApiResource):
-    resource_name = 'order_statuses'
+    resource_name = 'v2/order_statuses'

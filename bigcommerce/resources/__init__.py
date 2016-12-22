@@ -1,3 +1,4 @@
+# V2 resources
 from .banners import *
 from .brands import *
 from .categories import *
@@ -20,3 +21,6 @@ from .store import *
 from .tax_classes import *
 from .time import *
 from .webhooks import *
+
+# V3 resources
+from .v3catalog import *

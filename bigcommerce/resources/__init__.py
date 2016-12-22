@@ -24,3 +24,4 @@ from .webhooks import *
 
 # V3 resources
 from .v3catalog import *
+from .v3customers import *
